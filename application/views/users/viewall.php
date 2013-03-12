@@ -1,2 +1,13 @@
-<?php echo $tekst1; ?><br>
-<?php echo $number1; ?> + <?php echo $number2; ?> + <?php echo $number3; ?> = <?php echo $answer; ?>
+<?php echo $header; ?><br />
+<table>
+	<tr>
+		<th>id</th>
+		<th>voornaam</th>
+		<th>tussenvoegsel</th>
+		<th>achternaam</th>
+	</tr>
+		<?php echo $show_users; ?>
+</table>
+<p>Klik <a href='../users/add_user'>hier</a> om een nieuw record toe te voegen</p>
+
+

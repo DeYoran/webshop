@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>title</title>
+		<title>MVC framework</title>
 	</head>
 	<body>
-	<p><h1>Header</h1></p>
+		<p><h3>Webshop</h3></p>
+
+

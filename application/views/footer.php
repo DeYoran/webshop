@@ -1,3 +1,3 @@
-		<p>info | contact | disclaimer | colofon</p>
+		<p><h3>info | disclaimer | contact | colofon | sponsors</h3></p>
 	</body>
 </html>
