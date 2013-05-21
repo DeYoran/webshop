@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MVC framework</title>
+		<title>webshop</title>
+		<link rel='stylesheet' href="<?php echo BASE_URL; ?>public/css/style.css" type="text/css" />
+		<link rel='stylesheet' href="<?php echo BASE_URL; ?>public/js/jquery-ui-1.10.2.custom/css/smoothness/jquery-ui-1.10.2.custom.css" type='text/css' />
+		<script type='text/javascript' src='<?php echo BASE_URL; ?>public/js/jquery-1.9.1.js'></script>
+		<script type='text/javascript'
+				src='<?php echo BASE_URL; ?>public/js/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.js'>
+		</script>
+		<link href="<?php echo BASE_URL; ?>public/img/favicon.ico" rel="icon" type="image/x-icon">
 	</head>
 	<body>
-		<p><h3>Webshop</h3></p>
+		<div id='container'>
+			<div id='banner'>
+				<?php include("banner.php"); ?>
+			</div>
+			<div id='nav-container'>
+				<?php include("link.php"); ?>
+			</div>
+				<div id='content'>
 
 
