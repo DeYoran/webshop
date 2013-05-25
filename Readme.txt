@@ -1,1 +1,1 @@
-website voor shift
+Dit is een opdracht voor AM1A, het maken van een webshop met het design pattern MVC (Model View Control)

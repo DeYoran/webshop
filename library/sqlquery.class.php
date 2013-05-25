@@ -67,11 +67,6 @@
 			return $result;			
 		}
 	}
-	
-	public function find_last_inserted_id()
-	{
-		return mysql_insert_id();
-	}
  }
 ?>
 

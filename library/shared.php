@@ -38,11 +38,8 @@
 		 }
 		 else
 		 {
-			echo "<script> alert('method ".$action." not found'); </script>";
+			echo "method ".$action."NOT FOUND";
 		 }
-		 
-		 DEFINE ('CONTROLLER', $controllerName);
-		 DEFINE ('ACTION',$action);
 	}
 	
 	function __autoload($classname)
@@ -61,7 +58,7 @@
 		}
 		else
 		{
-			echo $classname." not found";
+			echo $classname." NOT FOUND";
 		}
 	}
 	
