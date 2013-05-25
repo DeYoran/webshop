@@ -23,31 +23,41 @@
 		extract($this->_variables);
 		
 		//header
-		if (file_exists(ROOT.DS.'application'.DS.'views'.DS.$this->_controller.DS.'header.php'))
+		if (file_exists(ROOT.DS.'application/views'.DS.$this->_controller.'/header.php'))
 		{
-			require_once(ROOT.DS.'application'.DS.'views'.DS.$this->_controller.DS.'header.php');
+			require_once(ROOT.DS.'application/views'.DS.$this->_controller.'/header.php');
 		}
 		else
 		{
-			require_once(ROOT.DS.'application'.DS.'views'.DS.'header.php');
+			require_once(ROOT.DS.'application/views/header.php');
 		}
 		//content
-		if ( file_exists(ROOT.DS.'application'.DS.'views'.DS.$this->_controller.DS.$this->_action.'.php'))
+		if ( file_exists(ROOT.DS.'application/views'.DS.$this->_controller.DS.$this->_action.'.php'))
 		{
-			require_once(ROOT.DS.'application'.DS.'views'.DS.$this->_controller.DS.$this->_action.'.php');
+			require_once(ROOT.DS.'application/views'.DS.$this->_controller.DS.$this->_action.'.php');
 		}
 		else
 		{
-			echo 'De view behorende bij de method: '.$this->_action.' bestaat nog niet';
+			echo '<h1>De view behorende bij de method: '.$this->_action.' bestaat nog niet</h1>';
 		}
 		//footer
-		if (file_exists(ROOT.DS.'application'.DS.'views'.DS.$this->_controller.DS.'footer.php'))
+		if (file_exists(ROOT.DS.'application/views'.DS.$this->_controller.DS.'footer.php'))
 		{
-			require_once(ROOT.DS.'application'.DS.'views'.DS.$this->_controller.DS.'footer.php');
+			require_once(ROOT.DS.'application/views'.DS.$this->_controller.DS.'footer.php');
 		}
 		else
 		{
-			require_once(ROOT.DS.'application'.DS.'views'.DS.'footer.php');
+			require_once(ROOT.DS.'application/views/footer.php');
+		}
+		//links
+		if (file_exists(ROOT.DS.'application/views'.DS.$this->_controller.DS.'link.php'))
+		{
+			require_once(ROOT.DS.'application/views'.DS.$this->_controller.DS.'link.php');
+			require_once(ROOT.DS.'application/views/link.php');
+		}
+		else
+		{
+			require_once(ROOT.DS.'application/views/link.php');
 		}
 	}
  }

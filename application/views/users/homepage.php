@@ -1,0 +1,1 @@
+<?php include "../application/views/users/".$page.".php"; ?>

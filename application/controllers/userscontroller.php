@@ -1,1 +1,79 @@
-<?php class UsersController extends Controller {	public function viewall()	{		$this->set('header', 'Hieronder staan alle users in de user tabel');		$users = $this->_model->select_all();		$show_table = '';		foreach ($users as $value)		{			$show_table .= "<tr>								<td>".$value['User']['id']."</td>								<td>".$value['User']['firstname']."</td>								<td>".$value['User']['infix']."</td>								<td>".$value['User']['surname']."</td>								<td><a href='./update_user/".$value['User']['id']."'>										<img src='../img/edit.png' alt='drop' />								</a></td>								<td><a href='./remove_user/".$value['User']['id']."'>										<img src='../img/drop.png' alt='drop' />								</a></td>						    </tr>";				}		$this->set('show_users', $show_table);	}		public function remove_user($id)	{		$this->_model->remove_user($id);		header('location:../viewall');	}		public function add_user()	{		if ( isset ($_POST['submit']) )		{			$this->_model->insert_into_users($_POST);			header('location:./users/viewall');		}		else		{		$this->set('header', 'Voeg een gebruiker toe');		}	}	public function update_user($id)	{		$this->set('header', 'wijzig de gebruiker');	}	 }?>
+<?php
+ class UsersController extends Controller
+ {
+	
+	public function homepage($page = 'home')
+	{
+		$this->set('page',$page);
+	}
+	
+	public function pics()
+	{
+	
+	}
+	
+	public function vids()
+	{
+	
+	}
+	
+	public function login()
+	{
+		if (!empty($_POST['username']) && !empty($_POST['password']))
+		{			
+			$user = $this->_model->select_user_from_login($_POST);
+			if ( sizeof($user) > 0)
+			{
+				//Zet session_start() in de index.php
+				$_SESSION['userrole'] = $user[0]['Acount']['role'];
+				//var_dump($user);
+				switch ($user[0]['Acount']['email'])
+				{
+					case "admin":
+						$sendToPage = "../admins/adminhomepage";
+					break;
+					case "root":
+						$sendToPage = "../roots/homepage";
+					break;
+				}
+				$header = "U bent succesvol ingelogd";
+			}
+			else
+			{
+				$header = "Wachtwoord en/of gebruikersnaam niet juist<br />
+						   U wordt doorgestuurd naar de homepage";
+				$sendToPage = "../users/homepage";
+			}
+		}
+		else
+		{
+			$header = "U heeft een van de velden niet ingevuld.<br />
+					   U wordt doorgestuurd naar de
+					   Homepage";
+			$sendToPage = "../users/homepage";
+		}
+		$this->set("header", $header);
+		header("refresh:1;url=".$sendToPage);
+	}
+	
+	public function logout()
+	{
+		session_destroy();
+		header("location: ".BASE_URL."/users/homepage");
+	}
+	
+	public function music()
+	{
+		if ( ! isset ($_SESSION['userrole']))
+		{
+			header("location:".BASE_URL."/users/homepage");
+		}
+		else
+		{
+			
+		}
+	}
+	
+	
+ }
+?>
