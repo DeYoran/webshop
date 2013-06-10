@@ -6,6 +6,7 @@
 	protected $_controller;
 	protected $_action;
 	protected $_template;
+	protected $qoutes;
 	
 	protected function set($name, $value)
 	{
@@ -20,6 +21,17 @@
 		$this->_controller = $controller; //users
 		$this->_action = $action; //viewall
 		$this->_template = new Template($controller, $action); //new Template('users', 'viewall')
+		$qoutes = $this->_model->select_qoutes();
+		$qoutelist = '';
+		foreach ($qoutes[0] as $value)
+		{
+			$qoutelist .= "<div id='q".$value['id']."' class='".$value['type']." lefttop'>
+					'".$value['content']."'
+					<br><br>
+					- ".$value['name']." -
+					</div>";
+		}
+		$this->set('qoutes',$qoutelist);
 	}
 	
 	public function __destruct()

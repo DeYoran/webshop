@@ -1,30 +1,13 @@
 <?php
  class User extends Model
  {
-	public function select_all()
+	public function select_user_from_login($post)
 	{
-		return $this->query("SELECT * FROM `users`");
+		return $this->query("SELECT * FROM acounts WHERE email = '".$post['username']."' AND password = '".$post['password']."'");
 	}
-
-	public function remove_user($id)
+	public function select_blog()
 	{
-		$this->query("DELETE FROM `users` WHERE `user_id` = '".$id."'");
-	}
-	
-	public function insert_into_users($post)
-	{
-		$this->query("INSERT INTO `users`(`id`, `firstname`, `infix`, `surname`) VALUES  ('NULL','{$post[fisrtname]}','{$post[infix]}','{$post[surname]}');");
-	}
-	
-	public function update_user($post)
-	{
-		$this->query("UPDATE `users` SET `firstname` = '{$post[fisrtname]}', `infix` = '{$post[infix]}', `surname` = '{$post[surname]}'
-									WHERE id = '{$post[id]}'");
-	}
-	
-	public function find_user_by_id($id)
-	{
-		$this->query("SELECT * FROM `users` WHERE `user_id` = '".$id."'");
+		return $this->query("SELECT * FROM blog");
 	}
  }
 ?>
