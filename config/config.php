@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 	require_once '../scripts/mobileDetect/Mobile_Detect.php';
 	switch($_SERVER['HTTP_HOST'])
 	{
@@ -31,4 +32,11 @@
 	$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
 	$scriptVersion = $detect->getScriptVersion();
 	define ('DEVICETYPE',$deviceType);
+=======
+	define('DB_NAME', 'webshop');
+	define('DB_USER', 'root');
+	define('PASSWORD', '');
+	define('DB_HOST', 'localhost');
+	define('BASE_URL', '/webshop/');
+>>>>>>> 8eac29eca5975d3592eeb51e369d1cf5368344b7
 ?>

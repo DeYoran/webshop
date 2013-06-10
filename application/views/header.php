@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<<<<<<< HEAD
 		<title>Shift</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!--css-->
@@ -18,6 +19,18 @@
 	</head>
 	<!--youmad?-->
 	<body>	
+=======
+		<title>webshop</title>
+		<link rel='stylesheet' href="<?php echo BASE_URL; ?>public/css/style.css" type="text/css" />
+		<link rel='stylesheet' href="<?php echo BASE_URL; ?>public/js/jquery-ui-1.10.2.custom/css/smoothness/jquery-ui-1.10.2.custom.css" type='text/css' />
+		<script type='text/javascript' src='<?php echo BASE_URL; ?>public/js/jquery-1.9.1.js'></script>
+		<script type='text/javascript'
+				src='<?php echo BASE_URL; ?>public/js/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.js'>
+		</script>
+		<link href="<?php echo BASE_URL; ?>public/img/favicon.ico" rel="icon" type="image/x-icon">
+	</head>
+	<body>
+>>>>>>> 8eac29eca5975d3592eeb51e369d1cf5368344b7
 		<div id='container'>
 			<div id='banner'>
 				<?php include("banner.php"); ?>
@@ -25,4 +38,10 @@
 			<div id='nav-container'>
 				<?php include("link.php"); ?>
 			</div>
+<<<<<<< HEAD
 				<div id='content'>
+=======
+				<div id='content'>
+
+
+>>>>>>> 8eac29eca5975d3592eeb51e369d1cf5368344b7

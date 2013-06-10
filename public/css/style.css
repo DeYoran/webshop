@@ -1,0 +1,67 @@
+*
+{
+	padding:0px;
+	margin:0px;
+}
+
+body
+{
+	font-family:Arial;
+	font-size:12px;
+	background-image: url('../img/mi62BTU.png');
+}
+
+#container
+{
+	background-color: #ffffff;
+	width: 850px;
+	margin:auto;
+	margin-top:20px;
+	padding:2em;
+}
+
+#content
+{
+	background-color: #eeeeff;
+	width:80%;
+	height:400px;
+	position:relative;
+	margin-left:auto;
+	padding:1em;
+	margin-top:2em;
+	margin-bottom:2em;
+	overflow: auto;
+}
+
+#nav-container
+{
+	float:left;
+	width:10%;
+	background-color: #eeeeff;
+	min-height:300px;
+	margin-top:2em;
+	margin-bottom:2em;
+	padding:1em;
+}
+
+#banner, #footer
+{
+	text-align:center;
+	background-color:#00d;
+	padding:1em;
+	color:#fff;
+}
+
+#link ul
+{
+	list-style-type:none;
+}
+table
+{
+	border-collapse: collapse;
+}
+#link a:link { text-decoration:none; color:RGBA(2,0,81,0.8); }
+#link a:visited { text-decoration:none; color:RGBA(2,0,81,0.6); }
+#link a:hover { text-decoration:none; color:RGBA(200,0,81,1); }
+#link a:active { text-decoration:none; color:RGBA(20,20,20,0.8); }
+
